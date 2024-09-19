@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "titulo": "Hacerme unos mates",
+    "descripcion": "Tengo que hacerme unos buenos mates",
+    "fechaInicio": "2024-09-19T13:40:42.576Z",
+    "fechaLimite": "2024-09-19T13:40:42.576Z",
+    "tareaRealizada": true
+  },
+  {
+    "id": 3,
+    "titulo": "Ir al baño",
+    "descripcion": "Tengo que ir al baño a mear y cepillarme los dientes",
+    "fechaInicio": "2024-09-19T13:41:03.814Z",
+    "fechaLimite": "2024-09-19T00:00:00.000Z",
+    "tareaRealizada": true
+  },
+  {
+    "id": 1,
+    "titulo": "Comer budin",
+    "descripcion": "Tengo que comer budin de banana",
+    "fechaInicio": "2024-09-19T13:48:37.127Z",
+    "fechaLimite": "2024-09-19T13:48:37.127Z",
+    "tareaRealizada": false
+  }
+]

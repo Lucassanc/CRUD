@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /*Me permite deslizar cuando hago clicl en los links del menu*/
+    scroll-behavior: smooth;
+}
+/* MENU */
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header  header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #E0218A;
+    text-decoration: none;
+}
+.contenedor-header  header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header  header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header  header nav ul li a:hover{
+    color: #E0218A;
+}
+.nav-responsive{
+    background-color: #E0218A;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/* TAREAS */
+.tareas{
+    background: linear-gradient(to top, rgba(184, 27, 113,.6), rgba(184, 27, 113,1));
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.tareas .contenido-tareas{
+    max-width: 1100px;
+    margin: 15px;
+    margin-top: auto;
+}
+.tareas h2{
+    font-size: 15px;
+    font-family: 'Righteous';
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 0;
+}
+.tareas .contenido-tareas input, .tareas .contenido-tareas textarea{
+    display: block;
+    width: 80%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.tareas input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff; /* Color del borde del checkbox */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #252A2E; /* Color de fondo cuando no está seleccionado */
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+.tareas input[type="checkbox"]:checked {
+    background-color: #E0218A; /* Color de fondo cuando está seleccionado */
+    border-color: #fff; /* Color del borde cuando está seleccionado */
+}
+.tareas input[type="checkbox"]::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 5px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+}
+.tareas .contenido-tareas textarea{
+    height: 100px;
+}
+.tareas .contenido-tareas button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.tareas button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #E0218A;
+    z-index: -1;
+    transition: 1s;
+}
+.tareas button:hover .overlay{
+    width: 100%;
+}
+/* LISTA */
+.lista{
+    background-color: #570e36;
+    background-size: cover;
+    color: #fff;
+    padding: 50px 20px;
+}
+.lista h2{
+    color: #E0218A;
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 0;
+}
+.lista .taskContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.lista h3{
+    font-size: 24px;
+    font-family: 'Righteous';
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 0;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.lista h3:hover {
+    color: #E0218A;
+}
+.lista .overlay{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.lista p strong{
+    color: #E0218A;
+    font-weight: bold;
+}
+.lista button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    margin: 20px;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+/* SECCION ACTUALIZAR */
+.actualizar{
+    background-color: #6d1344;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    padding: 50px 20px;
+}
+.actualizar .contenido-tareasact{
+    max-width: 1100px;
+    margin: 15px;
+    margin-top: auto;
+}
+.actualizar h2{
+    font-size: 15px;
+    font-family: 'Righteous';
+    text-align: left;
+    font-weight: normal;
+    padding: 5px 0;
+}
+.actualizar .contenido-tareasact input, .actualizar .contenido-tareasact textarea{
+    display: block;
+    width: 45%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.actualizar input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff; /* Color del borde del checkbox */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #252A2E; /* Color de fondo cuando no está seleccionado */
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+.actualizar input[type="checkbox"]:checked {
+    background-color: #E0218A; /* Color de fondo cuando está seleccionado */
+    border-color: #fff; /* Color del borde cuando está seleccionado */
+}
+.actualizar input[type="checkbox"]::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 5px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+}
+.actualizar .contenido-tareasact textarea{
+    height: 100px;
+}
+.actualizar .contenido-tareasact button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 15px;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.actualizar button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #E0218A;
+    z-index: -1;
+    transition: 1s;
+}
+.actualizar button:hover .overlay{
+    width: 100%;
+}

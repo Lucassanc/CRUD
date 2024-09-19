@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Menu -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">CRUD</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#tareas" onclick="seleccionar()">TAREAS</a></li>
+                    <li><a href="#lista" onclick="seleccionar()">LISTA</a></li>
+                    <li><a href="#actualizar" onclick="seleccionar()">ACTUALIZAR</a></li>
+                    <li><a href="#borrar" onclick="seleccionar()">BORRAR</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- Tareas -->
+    <section id="tareas" class="tareas">
+        <div class="contenido-tareas">
+            <div id="formularioTareas">
+                <input type="text" id="titulo" placeholder="Tarea">
+                <textarea id="descripcion" cols="30" rows="10" placeholder="Descripcion"></textarea>
+                <h2>Fecha Limite</h2>
+                <input type="date" id="fechaLimite">
+                <h2>Tarea Realizada</h2>
+                <input type="checkbox" id="tareaRealizada">
+                <button onclick="agregarTarea()">
+                    <i class="fa-solid fa-thumbtack"></i> Agregar Tarea
+                    <span class="overlay"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Lista -->
+    <section id="lista" class="lista">
+        <h2>Lista de Tareas:</h2>
+        <div id="tasksContainer"></div>
+    </section>
+    <!-- Actualizar -->
+    <section id="actualizar" class="actualizar" style="display: none;">
+        <div class="contenido-tareasact">
+            <h2>Actualizar Tarea:</h2>
+            <div id="formularioActualizar">
+                <input type="hidden" id="tareaId" />
+                <input type="text" id="tituloActualizar" placeholder="Tarea" />
+                <textarea id="descripcionActualizar" cols="30" rows="10" placeholder="Descripción"></textarea>
+                <h2>Fecha Limite</h2>
+                <input type="date" id="fechaLimiteActualizar" />
+                <h2>Tarea Realizada</h2>
+                <input type="checkbox" id="tareaRealizadaActualizar" />
+                <button onclick="actualizarTarea()">
+                    <i class="fa-solid fa-pencil-alt"></i> Actualizar Tarea
+                    <span class="overlay"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
